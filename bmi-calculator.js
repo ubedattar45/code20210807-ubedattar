@@ -1,4 +1,5 @@
 var person = [{"Gender": "Male", "HeightCm": 171, "WeightKg": 96 }, { "Gender": "Male", "HeightCm": 161, "WeightKg": 85 }, { "Gender": "Male", "HeightCm": 180, "WeightKg": 77 }, { "Gender": "Female", "HeightCm": 166, "WeightKg": 62}, {"Gender": "Female", "HeightCm": 150, "WeightKg": 70}, {"Gender": "Female", "HeightCm": 167, "WeightKg": 82}];
+document.getElementById('originalJson').text = person;
 var HeightM, bmi, totalOverweight = 0;
 for(let i = 0; i < person.length; i++){
     HeightM = person[i].HeightCm/100;
@@ -28,3 +29,6 @@ for(let i = 0; i < person.length; i++){
 
 console.log(person);
 console.log("The total number of overweight people : " + totalOverweight);
+
+document.getElementById('updatedJson').text = person;
+document.getElementById('overWeight').text = "The total number of overweight people : " + totalOverweight;
